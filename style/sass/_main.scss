@@ -1,9 +1,65 @@
 body{
     font-family: $font;
     background-color: $color-background;
+    height: 2200px;
+}
+main {
+    width: 95vw;
+    height: 2000px;
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    margin: 30px auto;
+    grid-template: repeat(5, 1fr) / 1fr ;
+    row-gap: 1.7rem;
+    grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+    @media (min-width: 768px) {
+        height: 1300px;
+        grid-template: repeat(2, 500px) / repeat(4, 1fr);
+        grid-template-areas:
+        "first first second fifth"
+        "third fourth fourth fifth"
+        ;
+    }
+}
+.first{
+    grid-area: first;
+    background-color: $color-first;
+    height: 480px;
+}
+.second{
+    grid-area: second;
+    background-color: $color-second;
+    height: 255px;
+}
+.third{
+    grid-area: third;
+    background-color: $color-neutral;
+    height: 247px;
+    --text-color: rgba(25, 33, 46, 0.85);
+    --border-image: $color-neutral;
+}
+.fourth{
+    grid-area: fourth;
+    background-color: $color-third;
+    height: 420px;
+}
+.fifth{
+    grid-area: fifth;
+    background-color: $color-neutral;
+    height: 510px;
+    --text-color: rgba(25, 33, 46, 0.85);
+    --border-image: $color-neutral;
 }
 // footer
 .attribution {
+    position: relative;
+    top: 100px;
     font-size: 16px;
     text-align: center;
     a {

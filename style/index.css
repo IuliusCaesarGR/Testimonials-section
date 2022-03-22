@@ -1,10 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+p {
+  margin: 0rem 0 0.9rem 0;
+}
+
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: #ecf2f8;
+  height: 2200px;
+}
+
+main {
+  width: 95vw;
+  height: 2000px;
+  display: grid;
+  flex-direction: column;
+  justify-items: center;
+  margin: 30px auto;
+  grid-template: repeat(5, 1fr)/1fr;
+  row-gap: 1.7rem;
+  grid-template-areas: "first" "second" "third" "fourth" "fifth";
+}
+@media (min-width: 768px) {
+  main {
+    height: 1300px;
+    grid-template: repeat(2, 500px)/repeat(4, 1fr);
+    grid-template-areas: "first first second fifth" "third fourth fourth fifth";
+  }
+}
+
+.first {
+  grid-area: first;
+  background-color: #7541c8;
+  height: 480px;
+}
+
+.second {
+  grid-area: second;
+  background-color: #48556a;
+  height: 255px;
+}
+
+.third {
+  grid-area: third;
+  background-color: white;
+  height: 247px;
+  --text-color: rgba(25, 33, 46, 0.85);
+  --border-image: $color-neutral;
+}
+
+.fourth {
+  grid-area: fourth;
+  background-color: #19212e;
+  height: 420px;
+}
+
+.fifth {
+  grid-area: fifth;
+  background-color: white;
+  height: 510px;
+  --text-color: rgba(25, 33, 46, 0.85);
+  --border-image: $color-neutral;
 }
 
 .attribution {
+  position: relative;
+  top: 100px;
   font-size: 16px;
   text-align: center;
 }

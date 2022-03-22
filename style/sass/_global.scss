@@ -6,8 +6,17 @@ $size: 13px;
 // -- Colors--
 $color-first: hsl(263, 55%, 52%);
 $color-second: hsl(217, 19%, 35%);
-$color-third: hsl(219, 29%, 14%);
+$color-third: hsl(217, 30%, 14%);
 $color-neutral: hsl(0, 0%, 100%);
 $color-text: hsl(0, 0%, 81%);
 $color-background: hsl(210, 46%, 95%);
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+p{
+    margin: 0rem 0 .9rem 0;
+}
