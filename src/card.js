@@ -3,11 +3,10 @@ class person extends HTMLElement{
         super();
         this.image = this.getAttribute('image');
         this.name = this.getAttribute('name');
-        this.backImage = this.getAttribute('backimg');
         this.attachShadow({ mode: 'open' });
     }
     static get observedAttribute(){
-        return ['image', 'name', 'backImage'];
+        return ['image', 'name'];
     }
     attributesChangeCallback(attribute, oldValue, newValue){
         switch(attribute){
@@ -16,9 +15,6 @@ class person extends HTMLElement{
                 break;
             case 'name':
                 this.name = newValue;
-                break;
-            case 'backImage':
-                this.backImage = newValue;
                 break;
             default:
                 console.log(Error('Error'));
@@ -30,16 +26,20 @@ class person extends HTMLElement{
             <style>
                 :host{
                     width: 95%;
+                    max-width:500px;
+                    height: 100%;
                     border-radius: 12px;
                     --text-color: hsl(0, 0%, 100%);
                     --border-image: #a775f1;
                 }
+                @media (min-width: 768px){
+                    :host{
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
                 .user{
                     padding: 15px 32px;
-                    background-image: url(${this.backImage});
-                    background-repeat: no-repeat;
-                    background-position: 93% 10px;
-                    height: 94%;
                 }
                 .user_info{
                     width: 100%;
@@ -71,11 +71,15 @@ class person extends HTMLElement{
                     opacity: .5;
                 }
                 .user_text-focus{
+                    width: 100%;
+                    height: 100%;
                     font-size: 21px;
                     font-weight: 600;
                     color: var(--text-color);
                 }
                 .user_text-review{
+                    width: 100%;
+                    height: 100%;
                     margin-top: 20px;
                     color: hsl(0, 0%, 70%);
                 }
