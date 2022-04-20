@@ -1,0 +1,13 @@
+{
+  "name": "testimonials-grid-section-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w ./style/sass/index.scss  ./style/index.css"
+  },
+  "keywords": [],
+  "author": "Julio César García Rodríguez <julio07110191@gmail.com>",
+  "license": "MIT"
+}
