@@ -21,7 +21,7 @@ main {
     @media (min-width: 768px) {
         margin: 90px auto;
         min-width: 768px;
-        max-width: 60vw;
+        max-width: 80vw;
         grid-template: repeat(2, 1fr) / repeat(4, 1fr);
         gap: 20px;
         grid-template-areas:
@@ -33,7 +33,7 @@ main {
 .first{
     grid-area: first;
     background-color: $color-first;
-    background-image: url('../../images/bg-pattern-quotation.svg');
+    background-image: url('../images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
     background-position: 93% 10px;
 }
