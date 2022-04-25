@@ -31,7 +31,7 @@ main {
   main {
     margin: 90px auto;
     min-width: 768px;
-    max-width: 60vw;
+    max-width: 80vw;
     grid-template: repeat(2, 1fr)/repeat(4, 1fr);
     gap: 20px;
     grid-template-areas: "first first second fifth" "third fourth fourth fifth";
@@ -41,7 +41,7 @@ main {
 .first {
   grid-area: first;
   background-color: #7541c8;
-  background-image: url("../../images/bg-pattern-quotation.svg");
+  background-image: url("../images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: 93% 10px;
 }
